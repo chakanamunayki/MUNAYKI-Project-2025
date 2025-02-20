@@ -1,0 +1,94 @@
+{
+  "project": {
+    "status": {
+      "active": "Activo",
+      "completed": "Completado",
+      "upcoming": "Próximo"
+    }
+  },
+  "buttons": {
+    "learnMore": "Conoce nuestra historia",
+    "bookSession": "Reserva una Sesión",
+    "close": "Cerrar",
+    "menu": "Menú"
+  },
+  "metadata": {
+    "title": "Plataforma Munayki",
+    "description": "Conecta con ceremonias, terapeutas y retiros"
+  },
+  "words": {
+    "holistic": "holística",
+    "immersive": "inmersiva",
+    "inspiring": "inspiradora",
+    "awaken": "despertar",
+    "wisdom": "sabiduría",
+    "mind": "mente",
+    "body": "cuerpo",
+    "soul": "alma"
+  },
+  "tooltips": {
+    "holistic": "Abraza la sanación holística, donde cada faceta de tu ser se alinea en una sinfonía de equilibrio y crecimiento.",
+    "immersive": "Adéntrate en una experiencia inmersiva que te envuelve en energía transformadora y renovación suave.",
+    "inspiring": "Deja que los momentos inspiradores enciendan tu luz interior, guiándote hacia una esperanza y creatividad sin límites.",
+    "awaken": "Permite que tu espíritu despierte al suave llamado de cada nuevo día, floreciendo en un profundo autodescubrimiento.",
+    "wisdom": "Descubre la sabiduría que susurra verdades ancestrales, anclándote con claridad y propósito sereno.",
+    "mind": "Nutre tu mente como un santuario de calma y creatividad, donde florecen las percepciones reflexivas.",
+    "body": "Honra tu cuerpo como un templo de vitalidad natural, llevándote con gracia a través del viaje de la vida.",
+    "soul": "Abraza tu alma, un profundo manantial de amor y propósito, revelando la belleza de tu ser interior."
+  },
+  "holistic": {
+    "title": "Proyectos de Inversión Holística",
+    "description": "Descubre proyectos transformadores que combinan el crecimiento espiritual con el desarrollo sostenible, creando un impacto positivo para las comunidades y el medio ambiente.",
+    "project1": {
+      "title": "Eco-Lodge Valle Sagrado",
+      "description": "Un centro de retiro sostenible en el Valle Sagrado de Perú, que combina prácticas de sanación tradicionales con alojamiento ecológico y jardines de permacultura."
+    },
+    "project2": {
+      "title": "Centro de Sabiduría Indígena",
+      "description": "Apoyando a las comunidades indígenas en la preservación y compartición de su conocimiento ancestral mientras creamos oportunidades económicas sostenibles."
+    },
+    "project3": {
+      "title": "Academia de Artes Curativas",
+      "description": "Un centro educativo para prácticas de sanación holística, combinando la sabiduría ancestral con enfoques modernos de bienestar e investigación."
+    }
+  },
+  "footer": {
+    "tagline": "Tu viaje hacia el bienestar holístico comienza aquí",
+    "contact": {
+      "title": "Contáctanos",
+      "address": "Centro de Sanación La Chakana, Medellín, Colombia",
+      "phone": "+57 123 456 7890",
+      "email": "info@munayki.com",
+      "hours": "Lunes - Domingo: 8:00 AM - 6:00 PM"
+    },
+    "social": {
+      "title": "Síguenos",
+      "instagram": "Síguenos en Instagram",
+      "facebook": "Síguenos en Facebook",
+      "whatsapp": "Contáctanos por WhatsApp",
+      "youtube": "Míranos en YouTube"
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "ceremonies": "Ceremonias",
+      "therapies": "Terapias",
+      "retreats": "Retiros",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "newsletter": {
+      "title": "Boletín",
+      "description": "Suscríbete a nuestro boletín para recibir actualizaciones sobre nuevas ceremonias, terapias y retiros.",
+      "placeholder": "Ingresa tu correo electrónico",
+      "button": "Suscribirse"
+    },
+    "legal": {
+      "copyright": "© 2024 MUNAY-KI. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    }
+  },
+  "Optional": "Opcional",
+  "More Details": "Más Detalles",
+  "More details about": "Más detalles sobre"
+} 

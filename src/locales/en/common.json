@@ -1,0 +1,94 @@
+{
+  "project": {
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "upcoming": "Upcoming"
+    }
+  },
+  "buttons": {
+    "learnMore": "Learn More",
+    "bookSession": "Book a Session",
+    "close": "Close",
+    "menu": "Menu"
+  },
+  "metadata": {
+    "title": "Munayki Platform",
+    "description": "Connect with ceremonies, therapists, and retreats"
+  },
+  "words": {
+    "holistic": "holistic",
+    "immersive": "immersive",
+    "inspiring": "inspiring",
+    "awaken": "awaken",
+    "wisdom": "wisdom",
+    "mind": "mind",
+    "body": "body",
+    "soul": "soul"
+  },
+  "tooltips": {
+    "holistic": "Embrace holistic healing, where every facet of your being aligns in a symphony of balance and growth.",
+    "immersive": "Step into an immersive experience that envelops you in transformative energy and gentle renewal.",
+    "inspiring": "Let inspiring moments kindle your inner light, guiding you toward boundless hope and creativity.",
+    "awaken": "Allow your spirit to awaken to the gentle call of each new day, blossoming into profound self-discovery.",
+    "wisdom": "Discover wisdom that whispers ancient truths, anchoring you with clarity and serene purpose.",
+    "mind": "Nurture your mind as a sanctuary of calm and creativity, where thoughtful insights bloom.",
+    "body": "Honor your body as a temple of natural vitality, gracefully carrying you through life's journey.",
+    "soul": "Embrace your soul, a profound wellspring of love and purpose, revealing the beauty of your inner self."
+  },
+  "holistic": {
+    "title": "Holistic Investment Projects",
+    "description": "Discover transformative projects that blend spiritual growth with sustainable development, creating positive impact for communities and the environment.",
+    "project1": {
+      "title": "Sacred Valley Eco-Lodge",
+      "description": "A sustainable retreat center in Peru's Sacred Valley, combining traditional healing practices with eco-friendly accommodation and permaculture gardens."
+    },
+    "project2": {
+      "title": "Indigenous Wisdom Center",
+      "description": "Supporting indigenous communities in preserving and sharing their ancestral knowledge while creating sustainable economic opportunities."
+    },
+    "project3": {
+      "title": "Healing Arts Academy",
+      "description": "An educational hub for holistic healing practices, combining ancient wisdom with modern wellness approaches and research."
+    }
+  },
+  "footer": {
+    "tagline": "Your journey to holistic wellbeing begins here",
+    "contact": {
+      "title": "Contact Us",
+      "address": "La Chakana Healing Center, Medellín, Colombia",
+      "phone": "+57 123 456 7890",
+      "email": "info@munayki.com",
+      "hours": "Monday - Sunday: 8:00 AM - 6:00 PM"
+    },
+    "social": {
+      "title": "Follow Us",
+      "instagram": "Follow us on Instagram",
+      "facebook": "Like us on Facebook",
+      "whatsapp": "Contact us on WhatsApp",
+      "youtube": "Watch us on YouTube"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "ceremonies": "Ceremonies",
+      "therapies": "Therapies",
+      "retreats": "Retreats",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter to receive updates about new ceremonies, therapies, and retreats.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "legal": {
+      "copyright": "© 2024 MUNAY-KI. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "Optional": "Optional",
+  "More Details": "More Details",
+  "More details about": "More details about"
+} 

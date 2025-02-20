@@ -1,0 +1,65 @@
+{
+  "layout": {
+    "newChat": "New Chat",
+    "searchPlaceholder": "Search chats...",
+    "collapse": "Collapse",
+    "menu": {
+      "memories": "Memories",
+      "settings": "Settings"
+    },
+    "experts": {
+      "title": "Experts",
+      "noExperts": "No experts available",
+      "noResults": "No experts found matching your search"
+    }
+  },
+  "chat": {
+    "welcome": {
+      "title": "Welcome to MunayKi Chat",
+      "description": "Select a chat or start a new conversation with one of our holistic experts"
+    },
+    "inputPlaceholder": "Type a message...",
+    "send": "Send",
+    "loading": "Loading...",
+    "errorMessages": {
+      "failed": "Failed to send message",
+      "retry": "Try again"
+    },
+    "voiceInput": {
+      "start": "Start voice recording",
+      "stop": "Stop voice recording",
+      "language": "en-US",
+      "notSupported": "Voice input is not supported in your browser",
+      "error": "Error recording voice"
+    },
+    "suggestions": {
+      "meditation": "Meditation",
+      "chakras": "Chakras",
+      "energy": "Energy Healing",
+      "chinese_medicine": "Chinese Medicine",
+      "ayahuasca": "Ayahuasca Wisdom",
+      "grief": "Handling Loss",
+      "stress": "Stress Management",
+      "wellness": "Holistic Wellness"
+    },
+    "questions": {
+      "meditation": "Can you guide me through a simple meditation practice?",
+      "chakras": "What are chakras and how do they affect our wellbeing?",
+      "energy": "How can I improve my energy levels naturally?",
+      "chinese_medicine": "What are the key principles of Traditional Chinese Medicine?",
+      "ayahuasca": "Can you explain the spiritual significance of Ayahuasca ceremonies?",
+      "grief": "How can I cope with loss and grief in a healthy way?",
+      "stress": "What are some holistic approaches to managing stress and anxiety?",
+      "wellness": "What are the key aspects of holistic wellness?"
+    },
+    "actions": {
+      "upload": "Upload File",
+      "research": "Research Mode",
+      "internet": "Internet Search",
+      "uploadTypes": {
+        "image": "Image",
+        "document": "Document"
+      }
+    }
+  }
+} 

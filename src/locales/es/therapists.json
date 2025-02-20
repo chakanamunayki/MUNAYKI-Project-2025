@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "about": "Acerca de",
+    "services": "Servicios",
+    "location": "Ubicación",
+    "experience": "Experiencia y Credenciales",
+    "testimonials": "Testimonios"
+  },
+  "appointmentType": {
+    "virtual": "Sesiones Virtuales",
+    "presencial": "Sesiones Presenciales",
+    "both": "Sesiones Virtuales y Presenciales"
+  },
+  "services": {
+    "duration": "Duración",
+    "price": "Precio",
+    "book": "Reservar Ahora",
+    "learnMore": "Más Información"
+  },
+  "specializations": {
+    "ayahuasca": "Ceremonias de Ayahuasca",
+    "integracion": "Apoyo de Integración",
+    "medicina-ancestral": "Medicina Ancestral",
+    "psychology": "Psicología",
+    "traditional-practices": "Prácticas Tradicionales"
+  },
+  "location": {
+    "address": "Dirección",
+    "hours": "Horario",
+    "availability": "Disponibilidad",
+    "directions": "Cómo Llegar"
+  },
+  "experience": {
+    "years": "Años de Experiencia",
+    "certifications": "Certificaciones",
+    "education": "Educación",
+    "specialties": "Especialidades"
+  },
+  "testimonials": {
+    "title": "Lo que Dicen las Personas",
+    "rating": "Calificación",
+    "verified": "Reseña Verificada",
+    "reviews": "reseñas"
+  },
+  "booking": {
+    "title": "Reservar una Sesión",
+    "selectDate": "Seleccionar Fecha",
+    "selectTime": "Seleccionar Hora",
+    "selectType": "Seleccionar Tipo de Sesión",
+    "yourInfo": "Tu Información",
+    "submit": "Confirmar Reserva"
+  },
+  "languages": {
+    "title": "Idiomas",
+    "Spanish": "Español",
+    "English": "Inglés"
+  },
+  "rating": {
+    "outOf": "de 5",
+    "basedOn": "basado en {{count}} reseñas"
+  }
+} 

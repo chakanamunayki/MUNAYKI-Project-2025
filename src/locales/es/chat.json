@@ -1,0 +1,65 @@
+{
+  "layout": {
+    "newChat": "Nuevo Chat",
+    "searchPlaceholder": "Buscar chats...",
+    "collapse": "Colapsar",
+    "menu": {
+      "memories": "Memorias",
+      "settings": "Configuración"
+    },
+    "experts": {
+      "title": "Expertos",
+      "noExperts": "No hay expertos disponibles",
+      "noResults": "No se encontraron expertos que coincidan con tu búsqueda"
+    }
+  },
+  "chat": {
+    "welcome": {
+      "title": "Bienvenido a MunayKi Chat",
+      "description": "Selecciona un chat o inicia una nueva conversación con uno de nuestros expertos holísticos"
+    },
+    "inputPlaceholder": "Escribe un mensaje...",
+    "send": "Enviar",
+    "loading": "Cargando...",
+    "errorMessages": {
+      "failed": "Error al enviar el mensaje",
+      "retry": "Intentar de nuevo"
+    },
+    "voiceInput": {
+      "start": "Iniciar grabación de voz",
+      "stop": "Detener grabación de voz",
+      "language": "es-ES",
+      "notSupported": "La entrada de voz no está soportada en tu navegador",
+      "error": "Error al grabar voz"
+    },
+    "suggestions": {
+      "meditation": "Meditación",
+      "chakras": "Chakras",
+      "energy": "Sanación Energética",
+      "chinese_medicine": "Medicina China",
+      "ayahuasca": "Sabiduría Ayahuasca",
+      "grief": "Manejo del Duelo",
+      "stress": "Manejo del Estrés",
+      "wellness": "Bienestar Holístico"
+    },
+    "questions": {
+      "meditation": "¿Puedes guiarme a través de una práctica simple de meditación?",
+      "chakras": "¿Qué son los chakras y cómo afectan nuestro bienestar?",
+      "energy": "¿Cómo puedo mejorar mis niveles de energía naturalmente?",
+      "chinese_medicine": "¿Cuáles son los principios fundamentales de la Medicina Tradicional China?",
+      "ayahuasca": "¿Puedes explicar el significado espiritual de las ceremonias de Ayahuasca?",
+      "grief": "¿Cómo puedo afrontar la pérdida y el duelo de manera saludable?",
+      "stress": "¿Cuáles son algunos enfoques holísticos para manejar el estrés y la ansiedad?",
+      "wellness": "¿Cuáles son los aspectos clave del bienestar holístico?"
+    },
+    "actions": {
+      "upload": "Subir Archivo",
+      "research": "Modo Investigación",
+      "internet": "Búsqueda en Internet",
+      "uploadTypes": {
+        "image": "Imagen",
+        "document": "Documento"
+      }
+    }
+  }
+} 

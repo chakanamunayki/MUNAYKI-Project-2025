@@ -1,0 +1,59 @@
+{
+  "main": {
+    "ceremonies": {
+      "title": "Ceremonias",
+      "items": {
+        "cacao": "Ceremonia de Cacao",
+        "soundHealing": "Sanación con Sonido",
+        "fire": "Ceremonia de Fuego",
+        "fullMoon": "Luna Llena"
+      }
+    },
+    "therapies": {
+      "title": "Terapias",
+      "items": {
+        "reiki": "Reiki",
+        "sanacion-energetica": "Sanación Energética",
+        "meditacion": "Meditación",
+        "acupuntura": "Acupuntura",
+        "masaje": "Masaje Terapéutico",
+        "respiracion": "Respiración",
+        "sanacion-sonora": "Sanación con Sonido",
+        "yoga": "Yoga",
+        "ayahuasca": "Ceremonias de Ayahuasca",
+        "integracion": "Apoyo de Integración",
+        "medicina-ancestral": "Medicina Ancestral"
+      }
+    },
+    "retreats": {
+      "title": "Retiros",
+      "items": {
+        "weekend": "Retiros de Fin de Semana",
+        "weekLong": "Programas Semanales",
+        "custom": "Retiros Personalizados"
+      }
+    },
+    "venue": {
+      "title": "La Chakana"
+    },
+    "projects": {
+      "title": "Proyectos Holísticos"
+    },
+    "about": {
+      "title": "Acerca de"
+    },
+    "contact": {
+      "title": "Contacto"
+    }
+  },
+  "language": {
+    "toggle": "Cambiar idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  }
+} 

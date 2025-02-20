@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title": {
+      "prefix": "Awaken Your",
+      "rotatingWords": [
+        "Being",
+        "Mind",
+        "Body",
+        "Soul",
+        "Spirit",
+        "Energy",
+        "Wisdom",
+        "Heart"
+      ]
+    },
+    "description": "Step into MUNAY-KI's world of {holistic} possibilities, where expert-led ceremonies, {immersive} retreats, and {inspiring} projects converge to {awaken} your inner {wisdom} and guide you towards profound self-discovery and transformation of the health of your {mind}, {body} and {soul}."
+  },
+  "about": {
+    "title": "About MUNAY-KI",
+    "subtitle": "Discover our journey of healing and transformation",
+    "content": {
+      "intro": "MUNAY-KI was born from a deep understanding that true healing comes from connecting with our inner wisdom and the ancient practices that have guided humanity for generations.",
+      "approach": "Our approach combines traditional ceremonial practices with modern therapeutic techniques, creating a unique space where ancient wisdom meets contemporary healing methods.",
+      "mission": "Through our ceremonies, retreats, and therapeutic sessions, we guide you on a journey of self-discovery, helping you reconnect with your authentic self and unlock your full potential."
+    },
+    "stats": {
+      "experience": {
+        "value": "10+",
+        "label": "Years of Experience"
+      },
+      "people": {
+        "value": "500+",
+        "label": "People Transformed"
+      },
+      "approach": {
+        "value": "100%",
+        "label": "Holistic Approach"
+      }
+    }
+  },
+  "ceremonies": {
+    "title": "Ceremonies at La Chakana",
+    "description": "Experience transformative ceremonies in our sacred space, where ancient wisdom meets modern healing practices.",
+    "venue": {
+      "title": "Our Sacred Space",
+      "description": "La Chakana is a carefully curated sanctuary designed to facilitate deep healing and spiritual connection. Nestled in the heart of nature, our venue provides the perfect environment for transformative experiences.",
+      "facilities": "Our facilities include meditation spaces, ceremony rooms, integration areas, and comfortable amenities to ensure your journey is supported in every way."
+    },
+    "upcoming": {
+      "title": "Upcoming Ceremonies"
+    }
+  },
+  "ceremony": {
+    "status": {
+      "upcoming": "Upcoming",
+      "full": "Fully Booked",
+      "cancelled": "Cancelled"
+    },
+    "spotsAvailable": "spots available"
+  },
+  "buttons": {
+    "moreDetails": "More Details",
+    "learnMore": "Learn our story"
+  },
+  "therapists": {
+    "title": "Our Healing Guides",
+    "description": "Connect with experienced practitioners dedicated to your wellbeing and transformation",
+    "appointmentType": {
+      "virtual": "Virtual Sessions",
+      "presencial": "In-Person Sessions",
+      "both": "Virtual & In-Person Sessions"
+    },
+    "services": "Available Services"
+  },
+  "joinNetwork": {
+    "title": "Join Our Holistic Health Revolution",
+    "subtitle": "Together, we can create a powerful network of healers, practitioners, and sacred spaces dedicated to holistic wellbeing and spiritual growth.",
+    "benefits": {
+      "love": {
+        "title": "Share Love",
+        "description": "Join a community that supports and uplifts each other through shared wisdom and compassion."
+      },
+      "knowledge": {
+        "title": "Share Knowledge",
+        "description": "Exchange insights, techniques, and ancient wisdom with fellow practitioners."
+      }
+    },
+    "closing": "Join us in creating a world of healing and transformation"
+  }
+} 

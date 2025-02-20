@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title": {
+      "prefix": "Despierta Tu",
+      "rotatingWords": [
+        "Ser",
+        "Mente",
+        "Cuerpo",
+        "Alma",
+        "Espíritu",
+        "Energía",
+        "Sabiduría",
+        "Corazón"
+      ]
+    },
+    "description": "Adéntrate en el mundo de posibilidades {holísticas} de MUNAY-KI, donde las ceremonias guiadas por expertos, los retiros {inmersivos} y los proyectos {inspiradores} convergen para {despertar} tu sabiduría interior y guiarte hacia un profundo autodescubrimiento y la transformación de la salud de tu {mente}, {cuerpo} y {alma}."
+  },
+  "about": {
+    "title": "Sobre MUNAY-KI",
+    "subtitle": "Descubre nuestro viaje de sanación y transformación",
+    "content": {
+      "intro": "MUNAY-KI nació de una profunda comprensión de que la verdadera sanación proviene de conectar con nuestra sabiduría interior y las prácticas ancestrales que han guiado a la humanidad durante generaciones.",
+      "approach": "Nuestro enfoque combina prácticas ceremoniales tradicionales con técnicas terapéuticas modernas, creando un espacio único donde la sabiduría ancestral se encuentra con los métodos de sanación contemporáneos.",
+      "mission": "A través de nuestras ceremonias, retiros y sesiones terapéuticas, te guiamos en un viaje de autodescubrimiento, ayudándote a reconectar con tu ser auténtico y desbloquear tu potencial completo."
+    },
+    "stats": {
+      "experience": {
+        "value": "10+",
+        "label": "Años de Experiencia"
+      },
+      "people": {
+        "value": "500+",
+        "label": "Personas Transformadas"
+      },
+      "approach": {
+        "value": "100%",
+        "label": "Enfoque Holístico"
+      }
+    }
+  },
+  "ceremonies": {
+    "title": "Ceremonias en La Chakana",
+    "description": "Experimenta ceremonias transformadoras en nuestro espacio sagrado, donde la sabiduría ancestral se encuentra con las prácticas de sanación modernas.",
+    "venue": {
+      "title": "Nuestro Espacio Sagrado",
+      "description": "La Chakana es un santuario cuidadosamente diseñado para facilitar la sanación profunda y la conexión espiritual. Ubicado en el corazón de la naturaleza, nuestro espacio proporciona el ambiente perfecto para experiencias transformadoras.",
+      "facilities": "Nuestras instalaciones incluyen espacios de meditación, salas de ceremonia, áreas de integración y comodidades para asegurar que tu viaje esté completamente apoyado."
+    },
+    "upcoming": {
+      "title": "Próximas Ceremonias"
+    }
+  },
+  "ceremony": {
+    "status": {
+      "upcoming": "Próxima",
+      "full": "Completa",
+      "cancelled": "Cancelada"
+    },
+    "spotsAvailable": "cupos disponibles"
+  },
+  "buttons": {
+    "moreDetails": "Más Detalles",
+    "learnMore": "Conoce nuestra historia"
+  },
+  "therapists": {
+    "title": "Nuestros Guías Sanadores",
+    "description": "Conéctate con practicantes experimentados dedicados a tu bienestar y transformación",
+    "appointmentType": {
+      "virtual": "Sesiones Virtuales",
+      "presencial": "Sesiones Presenciales",
+      "both": "Sesiones Virtuales y Presenciales"
+    },
+    "services": "Servicios Disponibles"
+  },
+  "joinNetwork": {
+    "title": "Únete a Nuestra Revolución de Salud Holística",
+    "subtitle": "Juntos, podemos crear una red poderosa de sanadores, practicantes y espacios sagrados dedicados al bienestar holístico y al crecimiento espiritual.",
+    "benefits": {
+      "love": {
+        "title": "Comparte Amor",
+        "description": "Únete a una comunidad que se apoya y eleva mutuamente a través de la sabiduría compartida y la compasión."
+      },
+      "knowledge": {
+        "title": "Comparte Conocimiento",
+        "description": "Intercambia ideas, técnicas y sabiduría ancestral con otros practicantes."
+      }
+    },
+    "closing": "Únete a nosotros en la creación de un mundo de sanación y transformación"
+  }
+} 

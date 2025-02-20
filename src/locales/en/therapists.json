@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "about": "About",
+    "services": "Services",
+    "location": "Location",
+    "experience": "Experience & Credentials",
+    "testimonials": "Testimonials"
+  },
+  "appointmentType": {
+    "virtual": "Virtual Sessions",
+    "presencial": "In-Person Sessions",
+    "both": "Virtual & In-Person Sessions"
+  },
+  "services": {
+    "duration": "Duration",
+    "price": "Price",
+    "book": "Book Now",
+    "learnMore": "Learn More"
+  },
+  "specializations": {
+    "ayahuasca": "Ayahuasca Ceremonies",
+    "integracion": "Integration Support",
+    "medicina-ancestral": "Ancestral Medicine",
+    "psychology": "Psychology",
+    "traditional-practices": "Traditional Practices"
+  },
+  "location": {
+    "address": "Address",
+    "hours": "Hours",
+    "availability": "Availability",
+    "directions": "Get Directions"
+  },
+  "experience": {
+    "years": "Years of Experience",
+    "certifications": "Certifications",
+    "education": "Education",
+    "specialties": "Specialties"
+  },
+  "testimonials": {
+    "title": "What People Say",
+    "rating": "Rating",
+    "verified": "Verified Review",
+    "reviews": "reviews"
+  },
+  "booking": {
+    "title": "Book a Session",
+    "selectDate": "Select Date",
+    "selectTime": "Select Time",
+    "selectType": "Select Session Type",
+    "yourInfo": "Your Information",
+    "submit": "Confirm Booking"
+  },
+  "languages": {
+    "title": "Languages",
+    "Spanish": "Spanish",
+    "English": "English"
+  },
+  "rating": {
+    "outOf": "out of 5",
+    "basedOn": "based on {{count}} reviews"
+  }
+} 
