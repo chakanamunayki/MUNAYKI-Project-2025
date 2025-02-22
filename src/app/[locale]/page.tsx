@@ -10,24 +10,22 @@ import { therapists } from '@/data/therapists';
 import { type Locale } from '@/types/i18n';
 
 interface HomePageProps {
-  params: {
-    locale: Locale;
-  };
+  params: { locale: Locale };
 }
 
 export default function Home({ params: { locale } }: HomePageProps) {
   return (
     <main className="flex min-h-screen flex-col">
-      <Hero />
+      <Hero locale={locale} />
       <About />
       <SectionDivider locale={locale} />
-      <CeremoniesSection ceremonies={ceremonies} />
-      <TherapistsSection therapists={therapists} />
+      <CeremoniesSection ceremonies={ceremonies} locale={locale} />
+      <TherapistsSection therapists={therapists} locale={locale} />
       <div className="bg-background">
-        <HolisticInvestment />
+        <HolisticInvestment locale={locale} />
       </div>
       <div className="bg-muted/30">
-        <JoinNetwork />
+        <JoinNetwork locale={locale} />
       </div>
     </main>
   );

@@ -1,9 +1,9 @@
 'use client';
 
-import * as React from 'react';
-import { ThemeProvider } from './theme-provider';
+import { ThemeProvider } from 'next-themes';
 import { TranslationProvider } from '@/lib/contexts/translation-context';
 import { type Locale } from '@/types/i18n';
+import { useEffect } from 'react';
 
 interface ProvidersProps {
   children: React.ReactNode;
@@ -11,6 +11,10 @@ interface ProvidersProps {
 }
 
 export function Providers({ children, locale }: ProvidersProps) {
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   return (
     <ThemeProvider
       attribute="class"

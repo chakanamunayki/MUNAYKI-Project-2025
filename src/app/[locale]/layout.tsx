@@ -34,18 +34,12 @@ export default function LocaleLayout({
           <div className="flex min-h-screen flex-col">
             <header className="fixed top-0 z-50 w-full bg-white/95 dark:bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-background/60">
               <div className="container flex h-14 items-center justify-between">
-                {/* Main Navigation - Hidden on mobile */}
                 <MainNav className="hidden md:flex" />
-                
-                {/* Right Side Actions */}
                 <div className="flex items-center gap-2">
-                  {/* Desktop Actions - Hidden on mobile */}
                   <div className="hidden md:flex items-center gap-2">
                     <LanguageToggle />
                     <ThemeToggle />
                   </div>
-                  
-                  {/* Mobile Navigation - Visible only on mobile */}
                   <MobileNav />
                 </div>
               </div>

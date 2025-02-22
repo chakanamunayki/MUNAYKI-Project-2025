@@ -1,8 +1,10 @@
+import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { type Locale } from '@/types/i18n';
+import type { Database } from '@/types/supabase';
 
 const locales: Locale[] = ['en', 'es'];
 const defaultLocale: Locale = 'en';
@@ -18,14 +20,37 @@ function getLocale(request: NextRequest): Locale {
   return locale as Locale;
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
+  // Create Supabase client
+  const res = NextResponse.next();
+  const supabase = createMiddlewareClient<Database>({ req: request, res });
+
+  // Special handling for auth callback
+  if (request.nextUrl.pathname === '/auth/callback') {
+    const locale = getLocale(request);
+    const code = request.nextUrl.searchParams.get('code');
+    
+    if (code) {
+      // Keep the code but redirect to the localized route
+      const redirectUrl = new URL(`/${locale}/auth/callback`, request.url);
+      redirectUrl.searchParams.set('code', code);
+      return NextResponse.redirect(redirectUrl);
+    }
+  }
+
+  // Refresh session if expired
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  // Handle locale
   const pathname = request.nextUrl.pathname;
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
   // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
+  if (pathnameIsMissingLocale && !pathname.startsWith('/auth/callback')) {
     const locale = getLocale(request);
     const newUrl = new URL(`/${locale}${pathname}`, request.url);
     
@@ -36,9 +61,31 @@ export function middleware(request: NextRequest) {
     
     return NextResponse.redirect(newUrl);
   }
+
+  // Protected routes check (after locale check)
+  const isProtectedRoute = pathname.includes('/booking') || 
+                          pathname.includes('/profile');
+
+  if (isProtectedRoute && !session) {
+    const locale = getLocale(request);
+    const redirectUrl = new URL(`/${locale}/auth`, request.url);
+    redirectUrl.searchParams.set('redirectTo', pathname);
+    return NextResponse.redirect(redirectUrl);
+  }
+
+  return res;
 }
 
 export const config = {
-  // Skip all paths that should not be internationalized
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  matcher: [
+    /*
+     * Match all request paths except:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - public folder
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|public/).*)',
+  ],
 }; 

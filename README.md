@@ -1,15 +1,62 @@
-# Ansh & Riley Full-Stack Template
+# MUNAYKI Platform
 
-This is a full-stack template project for Software Composers to create  applications with AI.
+A platform connecting people with ceremonies, therapists, and retreats.
 
-## Getting started
-To create a new project, you go to `/paths`, choose from our list of Paths, and then use Cursor's Composer feature to quickly scaffold your project!
+## Tech Stack
 
-You can also edit the Path's prompt template to be whatever you like!
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Supabase (Auth, Storage, and Database)
+- React Hook Form
+- Zod
+- Zustand
+- Next-Intl (i18n)
 
-## Technologies used
-This doesn't really matter, but is useful for the AI to understand more about this project. We are using the following technologies
-- React with Next.js 14 App Router
-- TailwindCSS
-- Firebase Auth, Storage, and Database
-- Multiple AI endpoints including OpenAI, Anthropic, and Replicate using Vercel's AI SDK
+## Features
+
+- Bilingual support (English/Spanish)
+- Authentication and user profiles
+- Booking system for ceremonies and therapies
+- Real-time availability updates
+- Responsive design
+- Dark mode support
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up environment variables (see `.env.example`)
+4. Run the development server: `npm run dev`
+
+## Environment Variables
+
+Create a `.env.local` file with:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+## Project Structure
+
+```
+src/
+  app/           # Next.js app router pages
+  components/    # React components
+  lib/          # Utilities and configurations
+  types/        # TypeScript types
+  hooks/        # Custom React hooks
+  styles/       # Global styles
+  messages/     # i18n messages
+```
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Submit a pull request
+
+## License
+
+MIT
