@@ -38,7 +38,13 @@ export function PaymentInfoStep({
     handlePreviousStep,
     isSubmitting,
     setIsSubmitting,
-    eventId
+    eventId,
+    eventName,
+    eventDate,
+    eventTime,
+    eventLocation,
+    eventImage,
+    userId
   } = useBooking();
 
   // Calculate pricing
@@ -76,14 +82,14 @@ export function PaymentInfoStep({
       const completeBookingData = {
         booking_reference: bookingReference,
         event_id: eventId,
-        event_name: "Event Name", // Default value since it's not in formData
-        event_date: new Date().toISOString(), // Default value since it's not in formData
-        event_time: "", // Default value since it's not in formData
+        event_name: eventName || "Event Name",
+        event_date: eventDate || new Date().toISOString(),
+        event_time: eventTime || "",
         event_price: parseFloat(formData.eventPrice || '0'),
         event_currency: formData.eventCurrency || 'COP',
-        event_location: "Event Location", // Default value since it's not in formData
-        event_image: "", // Default value since it's not in formData
-        user_id: "user-id", // Default value since it's not in formData
+        event_location: eventLocation || "Event Location",
+        event_image: eventImage || "",
+        user_id: userId || "user-id",
         user_email: formData.email,
         main_participant: {
           id: `main-${Date.now()}`,
@@ -130,14 +136,14 @@ export function PaymentInfoStep({
           .insert({
             booking_reference: bookingReference,
             event_id: eventId,
-            event_name: "Event Name",
-            event_date: new Date().toISOString(),
-            event_time: "",
+            event_name: eventName || "Event Name",
+            event_date: eventDate || new Date().toISOString(),
+            event_time: eventTime || "",
             event_price: parseFloat(formData.eventPrice || '0'),
             event_currency: formData.eventCurrency || 'COP',
-            event_location: "Event Location",
-            event_image: "",
-            user_id: "user-id",
+            event_location: eventLocation || "Event Location",
+            event_image: eventImage || "",
+            user_id: userId || "user-id",
             user_email: formData.email,
             main_participant: completeBookingData.main_participant,
             is_group_booking: isGroupBooking,

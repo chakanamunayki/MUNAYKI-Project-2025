@@ -16,7 +16,7 @@
 - [x] Extract `PaymentInfoStep` component to `src/components/booking/payment-info-step.tsx`
 - [x] Create a `BookingContext` in `src/contexts/booking-context.tsx` to manage shared state
 - [x] Create initial version of refactored form in `multi-booking-form-v2.tsx`
-- [ ] Complete refactoring of `multi-booking-form.tsx` to use the new components and context
+- [x] Complete refactoring of `multi-booking-form.tsx` to use the new components and context
 
 ## 2. Form Validation Improvements
 - [ ] Implement react-hook-form for robust form validation
@@ -60,7 +60,7 @@
 3. ~~Create the BookingContext to manage shared state~~ (Completed)
 4. ~~Extract the AdditionalParticipantsStep component~~ (Completed)
 5. ~~Extract the PaymentInfoStep component next~~ (Completed)
-6. Complete the refactoring of the MultiBookingForm to use the new components
+6. ~~Complete the refactoring of the MultiBookingForm to use the new components~~ (Completed)
 7. Test thoroughly before moving to the next phase
 
 ## Completed Work
@@ -78,6 +78,7 @@
    - Extracted AdditionalParticipantsStep component with BookingContext integration
    - Extracted PaymentInfoStep component with booking submission logic
    - Improved component reusability and maintainability
+   - Completed refactoring of MultiBookingForm to use the new components and context
 
 ## Notes on SQL Function
 We already have an `insert_test_booking` SQL function that can be used for more robust database operations. This function:

@@ -80,11 +80,18 @@ interface MultiBookingFormV2Props {
 export function MultiBookingFormV2({ 
   locale, 
   eventId,
+  eventName,
+  eventDate,
+  eventTime,
   eventPrice,
   eventCurrency,
+  eventLocation,
+  eventImage,
+  userId,
   userEmail,
   isGroupBookingEnabled = true,
-  ...props
+  groupDiscountRate = 0.1,
+  depositPercentage = 0.5,
 }: MultiBookingFormV2Props) {
   return (
     <BookingProvider
@@ -94,6 +101,14 @@ export function MultiBookingFormV2({
       isGroupBookingEnabled={isGroupBookingEnabled}
       eventPrice={eventPrice}
       eventCurrency={eventCurrency}
+      eventName={eventName}
+      eventDate={eventDate}
+      eventTime={eventTime}
+      eventLocation={eventLocation}
+      eventImage={eventImage}
+      userId={userId}
+      groupDiscountRate={groupDiscountRate}
+      depositPercentage={depositPercentage}
     >
       <MultiBookingFormContent isGroupBookingEnabled={isGroupBookingEnabled} />
     </BookingProvider>
