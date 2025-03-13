@@ -1,16 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Loader2 } from "lucide-react";
+import React from "react";
 
 interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     label?: string;
     isLoading?: boolean;
+    icon?: React.ReactNode;
+    showArrow?: boolean;
 }
 
 export function ButtonColorful({
     className,
     label = "Explore Components",
     isLoading = false,
+    icon,
+    showArrow = true,
     ...props
 }: ButtonColorfulProps) {
     return (
@@ -46,8 +51,9 @@ export function ButtonColorful({
                     </>
                 ) : (
                     <>
+                        {icon && <span className="text-white dark:text-zinc-900">{icon}</span>}
                         <span className="text-white dark:text-zinc-900">{label}</span>
-                        <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
+                        {showArrow && <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />}
                     </>
                 )}
             </div>
