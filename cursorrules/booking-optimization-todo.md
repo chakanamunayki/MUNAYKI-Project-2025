@@ -11,11 +11,12 @@
 - [x] Show clear loading indicators during the authentication process
 
 ## 1. Component Extraction and Structure
-- [ ] Extract `PersonalInfoStep` component to `src/components/booking/steps/personal-info-step.tsx`
-- [ ] Extract `AdditionalParticipantsStep` component to `src/components/booking/steps/additional-participants-step.tsx`
-- [ ] Extract `PaymentInfoStep` component to `src/components/booking/steps/payment-info-step.tsx`
-- [ ] Create a `BookingContext` in `src/contexts/booking-context.tsx` to manage shared state
-- [ ] Refactor `multi-booking-form.tsx` to use the new components and context
+- [x] Extract `PersonalInfoStep` component to `src/components/booking/personal-info-step.tsx`
+- [x] Extract `AdditionalParticipantsStep` component to `src/components/booking/additional-participants-step.tsx`
+- [ ] Extract `PaymentInfoStep` component to `src/components/booking/payment-info-step.tsx`
+- [x] Create a `BookingContext` in `src/contexts/booking-context.tsx` to manage shared state
+- [x] Create initial version of refactored form in `multi-booking-form-v2.tsx`
+- [ ] Complete refactoring of `multi-booking-form.tsx` to use the new components and context
 
 ## 2. Form Validation Improvements
 - [ ] Implement react-hook-form for robust form validation
@@ -54,10 +55,13 @@
 - [ ] Document the database schema and relationships
 
 ## Starting Point for Next Phase
-1. Begin with component extraction and structure
-2. Extract the PersonalInfoStep component first
-3. Create the BookingContext to manage shared state
-4. Test thoroughly before moving to the next component
+1. ~~Begin with component extraction and structure~~ (In Progress)
+2. ~~Extract the PersonalInfoStep component first~~ (Completed)
+3. ~~Create the BookingContext to manage shared state~~ (Completed)
+4. ~~Extract the AdditionalParticipantsStep component~~ (Completed)
+5. Extract the PaymentInfoStep component next
+6. Complete the refactoring of the MultiBookingForm to use the new components
+7. Test thoroughly before moving to the next phase
 
 ## Completed Work
 1. Authentication Flow Optimization (March 2024)
@@ -66,6 +70,13 @@
    - Implemented LoadingOverlay component for visual feedback
    - Updated redirect patterns to preserve booking information
    - Improved user experience during authentication process
+
+2. Component Extraction and Structure (March 2024)
+   - Created PersonalInfoStep component for better code organization
+   - Implemented BookingContext for centralized state management
+   - Created initial version of refactored MultiBookingFormV2
+   - Extracted AdditionalParticipantsStep component with BookingContext integration
+   - Improved component reusability and maintainability
 
 ## Notes on SQL Function
 We already have an `insert_test_booking` SQL function that can be used for more robust database operations. This function:
