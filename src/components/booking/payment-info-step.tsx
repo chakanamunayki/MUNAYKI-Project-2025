@@ -16,6 +16,7 @@ import { useRouter } from 'next/navigation';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
 import { generateBookingReference } from '@/lib/utils';
+import { bookingService } from '@/services/booking-service';
 
 export interface PaymentInfoStepProps {
   depositPercentage?: number;
@@ -80,18 +81,18 @@ export function PaymentInfoStep({
       
       // Prepare the complete booking data
       const completeBookingData = {
-        booking_reference: bookingReference,
-        event_id: eventId,
-        event_name: eventName || "Event Name",
-        event_date: eventDate || new Date().toISOString(),
-        event_time: eventTime || "",
-        event_price: parseFloat(formData.eventPrice || '0'),
-        event_currency: formData.eventCurrency || 'COP',
-        event_location: eventLocation || "Event Location",
-        event_image: eventImage || "",
-        user_id: userId || "user-id",
-        user_email: formData.email,
-        main_participant: {
+        bookingReference: bookingReference,
+        eventId: eventId,
+        eventName: eventName || "Event Name",
+        eventDate: eventDate || new Date().toISOString(),
+        eventTime: eventTime || "",
+        eventPrice: formData.eventPrice || '0',
+        eventCurrency: formData.eventCurrency || 'COP',
+        eventLocation: eventLocation || "Event Location",
+        eventImage: eventImage || "",
+        userId: userId || "user-id",
+        userEmail: formData.email,
+        mainParticipant: {
           id: `main-${Date.now()}`,
           fullName: formData.fullName,
           email: formData.email,
@@ -103,65 +104,34 @@ export function PaymentInfoStep({
           paymentMethod: formData.paymentMethod as 'bank-transfer' | 'nequi',
           whatsappNumber: formData.whatsappNumber
         },
-        is_group_booking: isGroupBooking,
-        additional_participants: isGroupBooking ? additionalParticipants : [],
-        total_participants: isGroupBooking ? additionalParticipants.length + 1 : 1,
+        isGroupBooking: isGroupBooking,
+        additionalParticipants: isGroupBooking ? additionalParticipants : [],
+        totalParticipants: isGroupBooking ? additionalParticipants.length + 1 : 1,
         
         // Add pricing information
-        base_price: parseFloat(formData.eventPrice || '0'),
+        basePrice: parseFloat(formData.eventPrice || '0'),
         subtotal: pricing.subtotal,
-        has_group_discount: pricing.hasGroupDiscount,
-        discount_rate: pricing.discountRate,
-        discount_amount: pricing.discountAmount,
-        total_amount: pricing.totalAmount,
-        deposit_amount: pricing.depositAmount,
+        hasGroupDiscount: pricing.hasGroupDiscount,
+        discountRate: pricing.discountRate,
+        discountAmount: pricing.discountAmount,
+        totalAmount: pricing.totalAmount,
+        depositAmount: pricing.depositAmount,
         
         // Add booking metadata
-        booking_date: new Date().toISOString(),
-        booking_status: 'pending',
-        payment_status: 'pending'
+        bookingDate: new Date().toISOString(),
+        bookingStatus: 'pending' as const,
+        paymentStatus: 'pending' as const
       };
       
-      // Save booking to Supabase
-      console.log('Saving booking to Supabase:', completeBookingData);
-      
-      // First, save to localStorage as a backup
+      // Save booking to localStorage as a backup
       localStorage.setItem(`booking_${bookingReference}`, JSON.stringify(completeBookingData));
       localStorage.setItem('bookingId', bookingReference);
       
-      // Try to save to Supabase
+      // Try to save to Supabase using the booking service
       try {
-        const { data, error } = await supabase
-          .from('bookings')
-          .insert({
-            booking_reference: bookingReference,
-            event_id: eventId,
-            event_name: eventName || "Event Name",
-            event_date: eventDate || new Date().toISOString(),
-            event_time: eventTime || "",
-            event_price: parseFloat(formData.eventPrice || '0'),
-            event_currency: formData.eventCurrency || 'COP',
-            event_location: eventLocation || "Event Location",
-            event_image: eventImage || "",
-            user_id: userId || "user-id",
-            user_email: formData.email,
-            main_participant: completeBookingData.main_participant,
-            is_group_booking: isGroupBooking,
-            additional_participants: isGroupBooking ? additionalParticipants : [],
-            total_participants: isGroupBooking ? additionalParticipants.length + 1 : 1,
-            base_price: parseFloat(formData.eventPrice || '0'),
-            subtotal: pricing.subtotal,
-            has_group_discount: pricing.hasGroupDiscount,
-            discount_rate: pricing.discountRate,
-            discount_amount: pricing.discountAmount,
-            total_amount: pricing.totalAmount,
-            deposit_amount: pricing.depositAmount,
-            booking_date: new Date().toISOString(),
-            booking_status: 'pending',
-            payment_status: 'pending'
-          })
-          .select()
-          .single();
+        console.log('Saving booking using BookingService:', completeBookingData);
+        
+        const { data, error } = await bookingService.createBookingWithSQLFunction(completeBookingData);
         
         if (error) {
           console.error('Error saving booking to Supabase:', error);
@@ -171,6 +141,11 @@ export function PaymentInfoStep({
             : 'There was an issue saving your booking to the database, but you can continue with the locally saved data.');
         } else {
           console.log('Booking saved successfully:', data);
+          
+          // If we have a database ID, update the localStorage bookingId
+          if (data?.id) {
+            localStorage.setItem('bookingId', data.id);
+          }
         }
       } catch (dbError) {
         console.error('Database error:', dbError);
@@ -272,7 +247,7 @@ export function PaymentInfoStep({
         <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="whatsappNumber">
-              {locale === 'es' ? 'Número de WhatsApp para enviar comprobante' : 'WhatsApp number to send payment proof'} *
+              {locale === 'es' ? 'Tu número de WhatsApp' : 'Your WhatsApp number'} *
             </Label>
             <Input
               id="whatsappNumber"
@@ -284,8 +259,8 @@ export function PaymentInfoStep({
             />
             <p className="text-sm text-muted-foreground">
               {locale === 'es' 
-                ? 'Necesitamos tu número de WhatsApp para que puedas enviarnos el comprobante de pago.' 
-                : 'We need your WhatsApp number so you can send us the payment proof.'}
+                ? 'Necesitamos tu número de WhatsApp para poder contactarte sobre tu reserva.' 
+                : 'We need your WhatsApp number so we can contact you about your booking.'}
             </p>
           </div>
           
@@ -358,6 +333,33 @@ export function PaymentInfoStep({
                 </div>
               </div>
             </RadioGroup>
+          </div>
+          
+          {/* Payment proof instructions */}
+          <div className="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-lg border border-blue-100 dark:border-blue-900">
+            <h4 className="font-medium text-blue-800 dark:text-blue-300 flex items-center mb-2">
+              <Info className="h-4 w-4 mr-2" />
+              {locale === 'es' ? 'Enviar comprobante de pago' : 'Send payment proof'}
+            </h4>
+            <p className="text-sm text-blue-700 dark:text-blue-400 mb-2">
+              {locale === 'es' 
+                ? 'Después de realizar el pago, por favor envía el comprobante por WhatsApp al siguiente número:' 
+                : 'After making the payment, please send the proof via WhatsApp to the following number:'}
+            </p>
+            <div className="bg-white dark:bg-blue-900/50 p-2 rounded flex items-center justify-between">
+              <span className="font-mono text-blue-800 dark:text-blue-200 text-base">310 617 2607</span>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-blue-600 dark:text-blue-300 h-8"
+                onClick={() => {
+                  navigator.clipboard.writeText('3106172607');
+                  alert(locale === 'es' ? 'Número copiado!' : 'Number copied!');
+                }}
+              >
+                {locale === 'es' ? 'Copiar' : 'Copy'}
+              </Button>
+            </div>
           </div>
         </div>
         
