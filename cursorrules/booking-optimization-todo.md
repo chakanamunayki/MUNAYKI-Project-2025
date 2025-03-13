@@ -13,7 +13,7 @@
 ## 1. Component Extraction and Structure
 - [x] Extract `PersonalInfoStep` component to `src/components/booking/personal-info-step.tsx`
 - [x] Extract `AdditionalParticipantsStep` component to `src/components/booking/additional-participants-step.tsx`
-- [ ] Extract `PaymentInfoStep` component to `src/components/booking/payment-info-step.tsx`
+- [x] Extract `PaymentInfoStep` component to `src/components/booking/payment-info-step.tsx`
 - [x] Create a `BookingContext` in `src/contexts/booking-context.tsx` to manage shared state
 - [x] Create initial version of refactored form in `multi-booking-form-v2.tsx`
 - [ ] Complete refactoring of `multi-booking-form.tsx` to use the new components and context
@@ -55,11 +55,11 @@
 - [ ] Document the database schema and relationships
 
 ## Starting Point for Next Phase
-1. ~~Begin with component extraction and structure~~ (In Progress)
+1. ~~Begin with component extraction and structure~~ (Completed)
 2. ~~Extract the PersonalInfoStep component first~~ (Completed)
 3. ~~Create the BookingContext to manage shared state~~ (Completed)
 4. ~~Extract the AdditionalParticipantsStep component~~ (Completed)
-5. Extract the PaymentInfoStep component next
+5. ~~Extract the PaymentInfoStep component next~~ (Completed)
 6. Complete the refactoring of the MultiBookingForm to use the new components
 7. Test thoroughly before moving to the next phase
 
@@ -76,6 +76,7 @@
    - Implemented BookingContext for centralized state management
    - Created initial version of refactored MultiBookingFormV2
    - Extracted AdditionalParticipantsStep component with BookingContext integration
+   - Extracted PaymentInfoStep component with booking submission logic
    - Improved component reusability and maintainability
 
 ## Notes on SQL Function

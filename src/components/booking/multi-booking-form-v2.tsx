@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react';
 import { BookingProvider } from '@/contexts/booking-context';
 import { PersonalInfoStep } from './personal-info-step';
 import { AdditionalParticipantsStep } from './additional-participants-step';
+import { PaymentInfoStep } from './payment-info-step';
 import { StepIndicator } from './step-indicator';
 import { useBooking } from '@/contexts/booking-context';
 
@@ -50,10 +51,10 @@ function MultiBookingFormContent({
         <AdditionalParticipantsStep maxParticipants={10} />
       )}
       {currentStep === 'payment-info' && (
-        <div className="p-4 border rounded-md">
-          <h2 className="text-lg font-medium">Payment Info Step</h2>
-          <p>This component will be implemented next</p>
-        </div>
+        <PaymentInfoStep 
+          depositPercentage={0.5}
+          groupDiscountRate={0.1}
+        />
       )}
     </div>
   );
