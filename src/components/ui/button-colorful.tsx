@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Loader2 } from "lucide-react";
 
 interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     label?: string;
+    isLoading?: boolean;
 }
 
 export function ButtonColorful({
     className,
     label = "Explore Components",
+    isLoading = false,
     ...props
 }: ButtonColorfulProps) {
     return (
@@ -20,6 +22,7 @@ export function ButtonColorful({
                 "group",
                 className
             )}
+            disabled={isLoading || props.disabled}
             {...props}
         >
             {/* Gradient background effect */}
@@ -34,8 +37,19 @@ export function ButtonColorful({
 
             {/* Content */}
             <div className="relative flex items-center justify-center gap-2">
-                <span className="text-white dark:text-zinc-900">{label}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
+                {isLoading ? (
+                    <>
+                        <Loader2 className="w-4 h-4 text-white dark:text-zinc-900 animate-spin" />
+                        <span className="text-white dark:text-zinc-900">
+                            {label}
+                        </span>
+                    </>
+                ) : (
+                    <>
+                        <span className="text-white dark:text-zinc-900">{label}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
+                    </>
+                )}
             </div>
         </Button>
     );
